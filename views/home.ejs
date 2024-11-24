@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="/scripts/script.js" defer></script>
+    <link rel="icon" type="image/png" href="/images/book.webp" />
+
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <h1>Contact Form</h1>
+      </header>
+
+      <form id="contact" method="POST" action="/submit">
+        <!-- First Name -->
+        <div class="field-row">
+          <div>
+            <label for="fname">
+              First Name
+              <span id="err-fname" class="err">Field is required</span>
+            </label>
+            <input type="text" id="fname" name="fname" required />
+          </div>
+
+          <!-- Last Name -->
+          <div>
+            <label for="lname">
+              Last Name
+              <span id="err-lname" class="err">Field is required</span>
+            </label>
+            <input type="text" id="lname" name="lname" required />
+          </div>
+
+          <!-- Job Title -->
+          <div>
+            <label for="jobt">Job Title</label>
+            <input type="text" id="jobt" name="jobt" />
+          </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="field-row">
+          <div>
+            <label for="comp">Company</label>
+            <input type="text" id="comp" name="comp" />
+          </div>
+          <div>
+            <label for="linkin">
+              LinkedIn URL
+              <span id="err-linkin" class="err"></span>
+            </label>
+            <input type="text" id="linkin" name="linkin" />
+          </div>
+          <div>
+            <label for="email">
+              Email Address
+              <span id="err-email" class="err"></span>
+            </label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="field-row half">
+          <div>
+            <label for="meet">
+              How we met?
+              <span id="err-meet" class="err">Field is required</span>
+            </label>
+            <select id="meet" name="meet">
+              <option value="select">Please Select</option>
+              <option value="person">In person</option>
+              <option value="online">Online</option>
+              <option value="college">College</option>
+              <option value="highschool">Highschool</option>
+              <option value="jobf">Job Fair</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Other -->
+          <div>
+            <label for="other">
+              Other (please specify)
+              <input type="text" id="other" name="other" style="display: none;" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div id="message">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg"></textarea>
+        </div>
+
+        <!-- Mailing List -->
+        <div>
+          <label for="mailing">
+            <input type="checkbox" id="mailing" name="mailing" />
+            Please add me to your mailing list
+          </label>
+        </div>
+
+        <!-- Email Format -->
+        <p>
+          Choose an email format:
+          <label for="html" style="display: none;">
+            HTML
+            <input type="radio" id="html" name="email_format" value="html" />
+          </label>
+          <label for="text" style="display: none;">
+            Text
+            <input type="radio" id="text" name="email_format" value="text" />
+          </label>
+        </p>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

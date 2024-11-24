@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Submissions</title>
+    <link rel="stylesheet" href="public/styles/styles.css" />
+    <script src="public/scripts/script.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/images/book.webp" />
+</head>
+<body>
+    <h1>Guestbook Submissions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>LinkedIn</th>
+                <th>Email</th>
+                <th>Meet</th>
+                <th>Message</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% entries.forEach(entry => { %>
+                <tr>
+                    <td><%= entry.fname %></td>
+                    <td><%= entry.lname %></td>
+                    <td><%= entry.jobt %></td>
+                    <td><%= entry.comp %></td>
+                    <td><a href="<%= entry.linkin %>"><%= entry.linkin %></a></td>
+                    <td><%= entry.email %></td>
+                    <td><%= entry.meet %></td>
+                    <td><%= entry.msg %></td>
+                    <td><%= entry.created_at %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
